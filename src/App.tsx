@@ -1,7 +1,7 @@
 import { CurrencyProvider } from './context/CurrencyContext'
-import { CartProvider }     from './context/CartContext'
-import Navbar               from './components/Navbar'
-import ProductGrid          from './components/ProductGrid'
+import { CartProvider } from './context/CartContext'
+import Navbar from './components/Navbar'
+import ProductGrid from './components/ProductGrid'
 
 export default function App() {
   return (
