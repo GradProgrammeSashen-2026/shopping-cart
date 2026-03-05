@@ -1,6 +1,6 @@
 import { use } from 'react'
 import { CartStateContext, CartDispatchContext } from '../context/CartContext'
-import type { CartState, CartAction } from '../types'
+import type { CartAction } from '../types'
 
 export function useCart() {
   const state = use(CartStateContext)

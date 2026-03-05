@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { useCart, useCartDispatch } from '../hooks/useCart'
 import { useCurrency } from '../context/CurrencyContext'
 import { formatPrice } from '../utils/currency'
-import type { CartItem } from '../types'
+import type { CartItem, CurrencyCode } from '../types'
 
 interface Props {
   open: boolean
@@ -35,7 +35,7 @@ function CartRow({ item, currency, onIncrement, onDecrement, onRemove }: CartRow
         <p className="text-sm font-medium truncate">{item.title}</p>
 
         <p className="text-sm text-primary font-semibold">
-          {formatPrice(item.price, currency)}
+          {formatPrice(item.price, currency as CurrencyCode)}
         </p>
         <div className="flex items-center gap-2 mt-1">
           <Button
@@ -155,7 +155,7 @@ export default function CartDrawer({ open, onClose }: Props) {
             <div className="flex justify-between items-center text-sm mb-3">
               <span className="font-medium">Total</span>
               <span className="text-lg font-bold text-primary">
-                {formatPrice(totalPrice, currency)}
+                {formatPrice(totalPrice, currency as CurrencyCode)}
               </span>
             </div>
 
