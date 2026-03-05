@@ -1,4 +1,4 @@
-import React, { createContext, useState, use, type ReactNode } from 'react'
+import { createContext, useState, use, type ReactNode } from 'react'
 import type { CurrencyCode } from '../types'
 
 interface Value {
